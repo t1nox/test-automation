@@ -1,0 +1,10 @@
+[[runners]]
+  name = "node-docker"
+  url = "http://http://192.168.0.100/"
+  token = "QVf64rPX1ihE1zjYKz-V"
+  limit = 0
+  executor = "docker"
+  builds_dir = ""
+  shell = ""
+  environment = ["ENV=value", "LC_ALL=en_US.UTF-8"]
+  clone_url = "http://gitlab.example.local"

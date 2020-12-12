@@ -1,0 +1,28 @@
+
+- hosts: all
+  become: true
+  vars_files:
+    - vars/default.yml
+
+  tasks:
+    - name: install mc, nginx, htop
+      become: true
+      become_user: root
+      apt:
+        state: present
+        name:
+         - mc
+         - nginx
+         - htop
+
+    - name: Add Docker Repository
+      become: true
+      become_user: root
+      apt_repository:
+       repo: deb https://download.docker.com/linux/ubuntu bionic stable
+       state: present
+
+    - name: Update apt and install docker-ce
+      become: true
+      become_user: root
+      apt: update_cache=yes name=docker-ce state=latest

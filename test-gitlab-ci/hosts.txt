@@ -1,0 +1,7 @@
+[web-servers]
+
+server1    ansible_host=ec2-18-219-153-83.us-east-2.compute.amazonaws.com
+
+[web-servers:vars]
+ansible_user=ubuntu 
+ansible_ssh_private_key_file=/home/t1n0x/Files/DevOps/keys/ansible-test.pem
